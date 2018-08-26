@@ -58,6 +58,6 @@ class ArtistsController < ApplicationController
   end
 
   def set_preferences
-    @preference = Preference.first
+    @preference = Preference.first_or_create(params[:preference])
   end
 end
