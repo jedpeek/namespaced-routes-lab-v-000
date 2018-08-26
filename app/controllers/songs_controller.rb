@@ -2,7 +2,7 @@ class SongsController < ApplicationController
   before_action :set_preferences, only: [:index, :new]
 
   def index
-    @preference
+    @preference.song_sort_order
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
       if @artist.nil?
