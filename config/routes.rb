@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
   resources :songs
 
-  namespec :admin do
+  namespace :admin do
     resources :preferences, only: [:index]
   end
 
