@@ -1,5 +1,7 @@
 class ArtistsController < ApplicationController
+   before_action :set_preferences, only: [:index, :new]
   def index
+    @preference.artist_sort_order
     @artists = Artist.all
   end
 
